@@ -19,4 +19,6 @@ public interface ReservationRepository extends JpaRepository<Reservation, Intege
     List<Reservation> findByStartDateBetween(LocalDateTime startDate, LocalDateTime endDate);
 
     Page<Reservation> findByStatusContains(String status, PageRequest pageable);
+
+    Page<Reservation> findByUserUsernameContains(String searchName, PageRequest of);
 }
