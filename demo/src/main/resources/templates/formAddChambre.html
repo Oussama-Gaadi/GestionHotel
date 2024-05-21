@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New Chambre</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+  </head>
+  <body>
+    <div th:include="fragments/navbar.html"></div>
+
+    <div>
+      <div class="p-3">
+        <div class="card">
+          <div class="card-header">Add New Chambre</div>
+          <div class="card-body">
+            <form method="post" , th:action="@{save}">
+              <div class="mb-3">
+                <label for="codeChambre"> Code chambre </label>
+                <input class="form-control form-input-main" required id="codeChambre" type="text" name="codeChambre" th:value="${chambre.codeChambre}" />
+              </div>
+              <div class="mb-3">
+                <label for="prix">Prix</label>
+                <input class="form-control form-input-main" required id="prix" type="number" step="0.01" name="prix" th:value="${chambre.prix}" />
+              </div>
+              <div class="mb-3">
+                <label for="star">Star</label>
+                <input class="form-control form-input-main" required id="star" type="number" step="1" min="1" max="5" name="star" th:value="${chambre.star}" />
+              </div>
+
+              <button class="btn btn-primary" type="submit">Create</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div th:include="fragments/footer.html"></div>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+  </body>
+</html>
