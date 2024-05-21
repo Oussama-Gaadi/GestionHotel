@@ -29,7 +29,12 @@ public class DemoApplication implements CommandLineRunner {
 		chambreRepository.save(new Chambre(null, "R103", 250.00, 5));
 		chambreRepository.save(new Chambre(null, "R105", 210.00, 4));
 		chambreRepository.save(new Chambre(null, "R201", 175.00, 4));
-		chambreRepository.save(new Chambre(null, "R305", 129.99, 3));
+		chambreRepository.save(new Chambre(null, "R134", 250.00, 5));
+		chambreRepository.save(new Chambre(null, "R122", 170.00, 5));
+		chambreRepository.save(new Chambre(null, "R160", 260.00, 4));
+		chambreRepository.save(new Chambre(null, "R109", 210.00, 3));
+		chambreRepository.save(new Chambre(null, "R212", 175.00, 4));
+		chambreRepository.save(new Chambre(null, "R340", 180.00, 3));
 		chambreRepository.save(new Chambre(null, "R402", 315.00, 5));
 		chambreRepository.save(new Chambre(null, "R510", 225.00, 4));
 		chambreRepository.save(new Chambre(null, "R615", 154.95, 3));
